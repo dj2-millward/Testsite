@@ -1,21 +1,32 @@
-/*!
- * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+
+
+:root {
+  --color-primary: #{{ site.data.template.color.primary }};
+  --color-secondary: #{{ site.data.template.color.secondary }};
+  --color-secondary-dark: #{{ site.data.template.color.secondary-dark }};
+  --color-muted: #{{ site.data.template.color.muted }};
+  --color-bg: #{{ site.data.template.color.bg }};
+  --color-bg-alt: #{{ site.data.template.color.bg-alt }};
+  --color-text: #{{ site.data.template.color.text }};
+  --color-text-alt: #{{ site.data.template.color.text-alt }};
+}
+
+[data-theme="dark"] {
+  
+}
 
 body {
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #{{ site.data.template.color.secondary-dark }};
+    color: var(--color-text-b);
 }
 
 .text-muted {
-    color: #{{ site.data.template.color.muted }};
+    color: var(--color-text);
 }
 
 .text-primary {
-    color: #{{ site.data.template.color.primary }};
+    color: var(--color-primary);
 }
 
 p {
@@ -36,14 +47,14 @@ a.active {
 }
 
 a {
-    color: #{{ site.data.template.color.primary }};
+    color: var(--color-primary);
 }
 
 a:hover,
 a:focus,
 a:active,
 a.active {
-    color: #{{ site.data.template.color.secondary }};
+    color: var(--color-secondary);
 }
 
 h1,
@@ -407,7 +418,7 @@ section h3.section-subheading {
     padding: 25px;
     max-width: 400px;
     text-align: center;
-    background-color: #fff;
+    background-color: var(--color-secondary-dark);
 }
 
 #portfolio .portfolio-item .portfolio-caption h4 {
@@ -446,7 +457,7 @@ section h3.section-subheading {
     left: 40px;
     width: 2px;
     margin-left: -1.5px;
-    background-color: #f1f1f1;
+    background-color: var(--color-secondary-dark);
 }
 
 .timeline>li {
@@ -498,7 +509,7 @@ section h3.section-subheading {
     border-radius: 100%;
     text-align: center;
     color: #fff;
-    background-color: #{{ site.data.template.color.primary }};
+    background-color: var(--color-primary);
 }
 
 .timeline>li .timeline-image h4 {
@@ -657,14 +668,14 @@ aside.clients img {
 }
 
 section#contact {
-    background-color: #222;
+    background-color: var(--color-bg-alt);
     background-image: url('{{ site.baseurl }}/img/map-image.png');
     background-position: center;
     background-repeat: no-repeat;
 }
 
 section#contact .section-heading {
-    color: #fff;
+    color: var(--color-text-alt);
 }
 
 section#contact .form-group {
@@ -753,8 +764,9 @@ ul.social-buttons li a {
     font-size: 20px;
     line-height: 40px;
     outline: 0;
-    color: #fff;
-    background-color: #222;
+    border: 1px solid var(--color-primary);
+    color: var(--color-secondary);
+   /* background-color: var(--color-primary); */
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;
@@ -763,7 +775,8 @@ ul.social-buttons li a {
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-    background-color: #{{ site.data.template.color.primary }};
+    background-color: var(--color-secondary);
+    color: var(--color-text-alt);
 }
 
 .btn:focus,
@@ -828,7 +841,7 @@ ul.social-buttons li a:active {
     width: 1px;
     height: 75px;
     margin-left: 35px;
-    background-color: #222;
+    background-color: var(--);
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -838,7 +851,7 @@ ul.social-buttons li a:active {
     z-index: 1052;
     width: 1px;
     height: 75px;
-    background-color: #222;
+    background-color: var(--color-bg-alt);
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
@@ -863,5 +876,5 @@ img::-moz-selection {
 }
 
 body {
-    webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
+    webkit-tap-highlight-color: var(--color-primary);
 }

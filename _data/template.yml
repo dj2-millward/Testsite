@@ -2,8 +2,12 @@
 color:
   primary: 2986cc
   secondary: 16537e
-  secondary-dark: 333
-  muted: 777
+  secondary-dark: adadad
+  bg: ffffff #White
+  bg-alt: "000033"
+  text: "000000" #Black
+  muted: "ffffff"
+  text-alt: "ffffff" #White
 
 # Font Families
 font:
